@@ -1,0 +1,17 @@
+NAMES:-
+1)Naidu
+2)Ashok
+3)Rupesh
+4)Anvesh
+5)Shankar
+
+
+COURSE:-Bsc(Chem-A)
+
+
+THINKS LEARNED ABOUT GITHUB:-
+1)GitHub is an online platfrom to store the projects and codes.
+2)A repositorie is like an folder to store the projects.
+3)Commit means like a save option.
+4)Issues option is used to rise the tickets to track the errors and future updates.
+5)Work together on the same project with collaboration.
