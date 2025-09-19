@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Light Example</title>
+  <style>
+    body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #eee; }
+    .traffic-light { background: #222; border-radius: 20px; padding: 30px 14px; display: flex; flex-direction: column; align-items: center; }
+    .light { width: 60px; height: 60px; margin: 10px; border-radius: 50%; background: #444; transition: background-color .3s; }
+    #red.active { background: red; }
+    #yellow.active { background: yellow; }
+    #green.active { background: green; }
+    button { margin-top: 10px; padding: 7px 12px; border: none; border-radius: 5px; background: #0070f3; color: #fff; cursor: pointer;}
+  </style>
+</head>
+<body>
+  <div class="traffic-light">
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+    <button onclick="pedestrianRequest()">Pedestrian Request</button>
+  </div>
+  <script>
+    const lights = ["red", "green", "yellow"];
+    let current = 0;
+
+    function changeLight() {
+      lights.forEach(l => document.getElementById(l).classList.remove("active"));
+      document.getElementById(lights[current]).classList.add("active");
+      current = (current + 1) % lights.length;
+    }
+    changeLight();
+    setInterval(changeLight, 3000);
+
+    function pedestrianRequest() {
+      current = 0;
+      changeLight();
+    }
+  </script>
+</body>
+</html>
